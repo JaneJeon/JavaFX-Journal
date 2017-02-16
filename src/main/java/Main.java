@@ -21,9 +21,13 @@ public class Main {
 		final StyledDocument doc = textArea.getStyledDocument();
 		final Style style = textArea.addStyle("Default style", null);
 		StyleConstants.setForeground(style, Color.white);
-		StyleConstants.setFontSize(style, 13);
-		StyleConstants.setFontFamily(style, "Lucina Grande");
+		// adjust font size and margins so that the editor is at most 75 characters wide
+		// Swing freaks the f*** out with the caret position in HiDPI with certain fonts (e.g. Lucida Sans)
+		StyleConstants.setFontSize(style, 22);
+		StyleConstants.setFontFamily(style, "Lucida Grande");
 		final JScrollPane scrollPane = new JScrollPane(textArea);
+		// this still doesn't fix the wrapping...
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		
 		// loading the window
 		SwingUtilities.invokeLater(new Runnable() {
