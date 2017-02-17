@@ -1,15 +1,40 @@
-# Front-end scaffold for a portable desktop terminal
+# Journal for humans
 
-Just a prototype for another project I'm doing.
+This is a completely offline journal desktop application designed to interact with people in a natural way.
 
-I thought I'd start with the GUI part, and I wanted to create a terminal-like desktop application, where everything is done by typing.
+As a terminal, it takes in declarative commands from the user, and the journal uses Natural Language Processing to discover what the user is trying to do.
 
-The reason I'm not just using the terminal and am actually making a portable terminal clone is that 1. I want to have *complete* control over what is displayed (e.g. background image) and 2. I want to make a simple application that people can just double click and run (low entry barrier).
+In addition, it uses Sentiment Analysis to assist the program with creating appropriate responses and predicting mood swings.
 
-My goal for this repo is to finish an implementation that can be used in other projects to just plug in and have a terminal UI ready.
+I plan on making the AI powering this program to not to simply grade an entry on a happiness scale of 0 to 1 (which is what every sentiment analysis library is doing, and, frankly, is a completely inaccurate of display human emotions), but to actually understand the various emotions that are at hand, their respective intensities, and the cause of those emotions.
 
-Here's the 'terminal' in action: 
+## Supported actions:
+Journal actions:
+* Quit/exit the program
+* Write today's journal
+* Enter diary for a previous day I might've missed
+* See previous entries
 
-![screenshot](http://i.imgur.com/r6t1KtC.jpg)
+Emotion actions:
+* Emotional support (explicitly, or implicitly after rant/journal entry)
+* See mood swings over time
+* Ask for mood predictions
+* Tell if program is on the mark or wrong with its analysis of emotion
 
-And if I have the time, I plan on making this 'terminal' declarative, so that I can type in human languages (I plan on using Stanford's CoreNLP library for this).
+Program actions:
+* Set the user's name
+* Change font, size, color
+* Change background
+
+Automatic actions:
+* Greet with the user's name (in varying ways depending on mood predictions)
+* Tell user how they're feeling and why
+* Ask user for confirmation on unknown actions
+* Subtly painting background that reflects user's mood and experience over time
+
+## (Probable) technology stack:
+* (Confirmed) JavaFX for GUI front-end
+* Stanford's CoreNLP for language processing and intent extraction
+* H2 for embedded database that stores various configs and entries
+* Deeplearning4J for emotion predictions and learning from entries
+* (Unknown) For painting?
