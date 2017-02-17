@@ -1,4 +1,4 @@
-# Portable terminal scaffold
+# Front-end scaffold for a portable desktop terminal
 
 Just a prototype for another project I'm doing.
 
@@ -10,6 +10,6 @@ My goal for this repo is to finish an implementation that can be used in other p
 
 Here's the 'terminal' in action: 
 
-![screenshot](http://i.imgur.com/D4yc0m0.jpg)
+![screenshot](http://i.imgur.com/r6t1KtC.jpg)
 
-Still a long ways to go!
+And if I have the time, I plan on making this 'terminal' declarative, so that I can type in human languages (I plan on using Stanford's CoreNLP library for this).
