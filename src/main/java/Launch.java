@@ -14,8 +14,16 @@ public class Launch extends Application {
 	private double width = 960, height = 600;
 	private String imgPath = "background.jpg";
 	private TextArea textArea;
+	private Input input;
+
+	// passes the instance of this class to Action instance, then passes Action instance to Input
+	public Launch() {
+		Action actor = new Action(this);
+		input = new Input(actor);
+	}
 
 	public static void main(String[] args) {
+		new Launch();
 		launch(args);
 	}
 
@@ -36,9 +44,7 @@ public class Launch extends Application {
 		
 		textArea.setOnKeyPressed(event -> {
 			if (event.getCode() == KeyCode.ENTER) {
-				String response = Input.response(textArea.getText());
-				if (response.equals("quit")) System.exit(-1);
-				
+				String response = input.response(textArea.getText());
 				textArea.setText(response);
 				textArea.positionCaret(response.length());
 			}
@@ -60,5 +66,9 @@ public class Launch extends Application {
 		primaryStage.initStyle(StageStyle.UNDECORATED);
 		primaryStage.setResizable(false);
 		primaryStage.show();
+	}
+	
+	public void quit() {
+		System.exit(0);
 	}
 }
