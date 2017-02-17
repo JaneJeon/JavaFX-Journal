@@ -37,8 +37,9 @@ public class Launch extends Application {
 		textArea.setOnKeyPressed(event -> {
 			if (event.getCode() == KeyCode.ENTER) {
 				String response = Input.response(textArea.getText());
+				if (response.equals("quit")) System.exit(-1);
+				
 				textArea.setText(response);
-				// reset caret at the end
 				textArea.positionCaret(response.length());
 			}
 			// consume event to prevent another line from being added
