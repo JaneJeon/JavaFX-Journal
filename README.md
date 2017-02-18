@@ -7,3 +7,5 @@ In addition, there are a couple of key combination actions as well, such as taki
 You can modify the Input class to make this a fully-fledged terminal application.
 
 Screenshot of terminal in action: ![](http://i.imgur.com/N0SMFRD.jpg)
+
+Also, I literally just started learning JavaFX a day ago. Please don't hurt me
