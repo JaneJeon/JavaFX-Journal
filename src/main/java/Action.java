@@ -17,6 +17,4 @@ public class Action {
 		DBAccess.close();
 		terminal.quit();
 	}
-	
-	// various key combination actions
 }

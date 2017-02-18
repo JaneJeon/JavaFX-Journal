@@ -40,3 +40,5 @@ Automatic actions:
 * H2 for embedded database that stores various configs and entries
 * Deeplearning4J for emotion predictions and learning from entries
 * (Unknown) For painting?
+
+To Joe: you think I'm crazy, huh?

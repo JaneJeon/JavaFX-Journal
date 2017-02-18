@@ -73,7 +73,6 @@ public class Launch extends Application {
 				}
 			}
 			
-			// consume event to prevent another line from being added
 			event.consume();
 		});
 		
@@ -99,7 +98,7 @@ public class Launch extends Application {
 	}
 	
 	// save image
-	public void save(WritableImage screenshot, Stage stage) {
+	private void save(WritableImage screenshot, Stage stage) {
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image", "*.png"));
 		File file = fileChooser.showSaveDialog(stage);
