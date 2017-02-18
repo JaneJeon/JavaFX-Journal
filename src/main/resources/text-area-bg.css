@@ -1,9 +1,12 @@
 .text-area, .text-area .viewport, .text-area .content {
     -fx-background-color: transparent;
+    -fx-font-size: 22px;
     -fx-text-fill: white;
 }
 
-.text {
-    -fx-stroke: #828282;
-    -fx-stroke-width: 0.1px;
+.root {
+    -fx-background-image: url("background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 960.0 600.0;
+    -fx-background-position: center center;
 }

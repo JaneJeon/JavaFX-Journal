@@ -20,6 +20,7 @@ Emotion actions:
 * See mood swings over time
 * Ask for mood predictions
 * Tell if program is on the mark or wrong with its analysis of emotion
+* 'Draw my life'
 
 Program actions:
 * Set the user's name
@@ -34,6 +35,7 @@ Automatic actions:
 
 ## (Probable) technology stack:
 * (Confirmed) JavaFX for GUI front-end
+* JUnit for testing
 * Stanford's CoreNLP for language processing and intent extraction
 * H2 for embedded database that stores various configs and entries
 * Deeplearning4J for emotion predictions and learning from entries
