@@ -7,7 +7,6 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -41,7 +40,6 @@ public class Launch extends Application {
 		textArea = new TextArea();
 		textArea.setWrapText(true);
 		textArea.setPrefSize(height, width);
-		textArea.setFont(Font.font("Lucida Grande")); // try to keep width at most 75 characters
 		
 		// default dialog
 		textArea.appendText("Hi, there!\n");
