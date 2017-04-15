@@ -11,9 +11,11 @@ I plan on making the AI powering this program to not to simply grade an entry on
 ## Supported actions:
 Journal actions:
 * Quit/exit the program
+* Pleasantries
 * Write today's journal
 * Enter diary for a previous day I might've missed
 * See previous entries
+* Enter emotion score for previous entries
 
 Emotion actions:
 * Emotional support (explicitly, or implicitly after rant/journal entry)

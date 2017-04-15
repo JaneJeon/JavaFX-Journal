@@ -9,12 +9,16 @@ public class Action {
 	
 	// gets intent/actions/body from input?
 	public void passOn(String s) {
-		System.out.println("Received message "+s+" from Input");
-		if (s.equalsIgnoreCase("quit")) quit();
+		System.out.println("Received message '"+s+"' from Input");
+		if (s.equalsIgnoreCase("quit")) terminal.quit();
 	}
 	
-	private void quit() {
-		DBAccess.close();
-		terminal.quit();
+	// don't forget the newline at the end
+	public String output() {
+		String s = "";
+		for (int i=0; i<700; i++) {
+			s += Integer.toString(i);
+		}
+		return "Here is your output.\n" + s;
 	}
 }

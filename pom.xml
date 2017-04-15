@@ -21,10 +21,24 @@
     </build>
 
     <dependencies>
+        <!-- need to do these, apparently -->
         <dependency>
             <groupId>edu.stanford.nlp</groupId>
             <artifactId>stanford-corenlp</artifactId>
+            <version>3.7.0</version>
         </dependency>
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.7.0</version>
+            <classifier>models</classifier>
+        </dependency>
+        <!-- mandatory for the nlp library -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <!-- my dependencies -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
