@@ -74,8 +74,10 @@ public class Launch extends Application {
 				// check if user is just mashing Return without entering anything
 				if (event.getCode() == KeyCode.ENTER) {
 					// bare Enter press is end of input - pass onto Input class
-					textArea.setText(input.response(textArea.getText()));
-					textArea.positionCaret(textArea.getText().length());
+					consoleOutput = input.response(textArea.getText());
+					textArea.setText(consoleOutput);
+					textArea.positionCaret(consoleOutput.length());
+					textArea.setScrollTop(Double.MAX_VALUE);
 				} else if (event.getCode() == KeyCode.BACK_SPACE) {
 					// delete single character, unless if the user is trying to delete the console output
 					textArea.deletePreviousChar();
