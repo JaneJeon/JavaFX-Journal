@@ -19,6 +19,6 @@ public class Action {
 		for (int i=0; i<700; i++) {
 			s += Integer.toString(i);
 		}
-		return "Here is your output.\n" + s;
+		return "Here is your output.\n" + s + "\n";
 	}
 }

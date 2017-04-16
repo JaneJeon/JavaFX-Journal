@@ -1,47 +1,53 @@
 .text-area, .text-area .viewport, .text-area .content {
-    -fx-background-color: rgba(0, 0, 0, 0.09);
-    -fx-font-size: 22px;
-    -fx-text-fill: rgba(240, 240, 240, 1);
-    -fx-font-family: "Lucida Grande";
+    -fx-background-color: transparent;
+    -fx-font-size: 22px; /* this is the most readable font, but you can make it smaller as well*/
+    -fx-text-fill: rgba(255, 255, 255, 0.85);
+    -fx-font-family: "default font";
+    /*Good alternatives: verdana, geneva, helvetica neue, menlo*/
 }
 
 .root {
-    -fx-background-image: url("background.jpg");
+    -fx-background-color: transparent;
+    /*to make the window transparent, route the image to an empty path, or delete the below 4 lines*/
+    -fx-background-image: url("chicago-shadow.png");
     -fx-background-repeat: stretch;
+    /*the size must be specified for it to scale to the window's size'*/
     -fx-background-size: 960.0 600.0;
     -fx-background-position: center center;
 }
 
-.text-area > .scroll-pane {
-    -fx-vbar-policy: always;
-}
-
 /*
  * Because we can't avoid the vertical scroll bar, we're going to at least make it pretty.
- * Thank you Narayan Maharjan so much for your wonderful work:
+ * Refer to below two sources for details:
  * http://blog.ngopal.com.np/2012/07/11/customize-scrollbar-via-css/
+ * http://stackoverflow.com/questions/13200439/javafx2-2-making-a-scrollbar-with-transparent-background
  */
 
-.text-area .scroll-bar:vertical .track {
+.text-area .scroll-bar:vertical,
+.text-area .scroll-pane {
     -fx-background-color: transparent;
-    -fx-border-color: transparent;
+}
+
+.text-area .scroll-bar:vertical .track,
+.text-area .scroll-bar:vertical .track-background {
+    visibility: hidden;
 }
 
 .text-area .scroll-bar:vertical .increment-button,
 .text-area .scroll-bar:vertical .decrement-button {
-    -fx-background-color: transparent;
-    -fx-background-radius: 0em;
-    -fx-padding: 0 10 0 0;
+    visibility: hidden;
+    -fx-padding: 0 0 0 0;
 }
 
 .text-area .scroll-bar .increment-arrow,
 .text-area .scroll-bar .decrement-arrow {
     -fx-shape: " ";
     -fx-padding: 0;
+    visibility: hidden;
 }
 
 .text-area .scroll-bar:vertical .thumb {
-    -fx-background-color: derive(black, 70%);
-    -fx-background-insets: 1.9, 0, 0;
+    -fx-background-color: rgba(100, 100, 100, 0.8);
+    -fx-background-insets: 2, 0, 0;
     -fx-background-radius: 2em;
 }
