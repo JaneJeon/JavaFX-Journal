@@ -21,12 +21,12 @@ import java.io.IOException;
 // TODO: hot reloading
 // TODO: select parts of text by mouse to delete and copy
 // http://stackoverflow.com/questions/5255466/deleting-only-a-selected-text-in-a-text-area
-// TODO: add support for ctrl+C, ctrl+V, ctrl+A, option+del (delete last word)
-// TODO: either hide the scroll bar until it's needed in a way that it won't hijack the auto-scroll, 
-// or make it invisible until a user hovers over it
+// TODO: add support for ctrl+C, ctrl+V, ctrl+A, ctrl+del, option+del (delete last word)
+// TODO: add search functionality
 
 public class Launch extends Application {
-	private double width = 960, height = 600;
+	// TODO: use values from css
+	private double width = 1280, height = 720;
 	private double filter = 0.3;
 	private TextArea textArea;
 	private Input input;

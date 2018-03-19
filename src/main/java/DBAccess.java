@@ -13,6 +13,6 @@ public class DBAccess {
 	
 	public static void close() {
 		// close connection to database
-		System.out.println("Closing database!");
+		System.out.println("Goodbye!");
 	}
 }

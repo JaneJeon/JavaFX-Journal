@@ -8,11 +8,12 @@
 
 .root {
     -fx-background-color: transparent;
-    /*to make the window transparent, route the image to an empty path, or delete the below 4 lines*/
-    -fx-background-image: url("chicago-shadow.png");
+    /* Note: the image name must not have any whitespaces */
+    /* to make the window transparent, route the image to an empty path, or delete the below 4 lines */
+    -fx-background-image: url("Norilsk.jpg");
     -fx-background-repeat: stretch;
-    /*the size must be specified for it to scale to the window's size'*/
-    -fx-background-size: 960.0 600.0;
+    /* the size must be specified for it to scale to the window's size' */
+    -fx-background-size: 1280.0 720.0;
     -fx-background-position: center center;
 }
 
@@ -47,7 +48,7 @@
 }
 
 .text-area .scroll-bar:vertical .thumb {
-    -fx-background-color: rgba(100, 100, 100, 0.8);
+    -fx-background-color: rgba(130, 130, 130, 0.8);
     -fx-background-insets: 2, 0, 0;
     -fx-background-radius: 2em;
 }
